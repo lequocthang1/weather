@@ -5,6 +5,8 @@ const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardsDiv = document.querySelector(".weather-cards");
 const weatherDataDiv = document.getElementById("weatherData");
 
+// FIXME: move api key to env file. See more: https://stackoverflow.com/questions/41501016/how-to-use-env-file-variable-in-js-file-other-than-keystone-js
+// Why move private or secret keys to env file: https://medium.com/@oadaramola/a-pitfall-i-almost-fell-into-d1d3461b2fb8
 const API_KEY = "2decce60c5970ba417be8bcdda6c323a"; // API key for OpenWeatherMap API
 
 const createWeatherCard = (cityName, weatherItem, index) => {
@@ -116,6 +118,7 @@ const changeBackgroundImage = (condition) => {
 const getCityCoordinates = () => {
   const cityName = cityInput.value.trim();
   if (cityName === "") return;
+  // FIXME: API URL https://api.openweathermap.org/geo/1.0 are repeat at getCityCoordinates function and getUserCoordinates function. Split it into a variable to reuseable
   const API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
 
   fetch(API_URL)
