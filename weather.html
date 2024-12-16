@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ứng dụng Dự báo Thời tiết</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="dubao h5 text-uppercase">Dự báo thời tiết</h1>
+    <div class="container">
+      <div class="weather-input">
+        <h3>Tên Tỉnh/Thành Phố</h3>
+        <input
+          class="city-input"
+          type="text"
+          placeholder="Vd: Hà Nội, Nam Định,..."
+        />
+        <button class="search-btn">Search</button>
+        <div class="separator"></div>
+        <button class="location-btn">Sử dụng vị trí hiện tại</button>
+      </div>
+      <div class="weather-data" id="weatherData" style="display: none">
+        <div class="current-weather">
+          <div class="details">
+            <h2>_______ ( ______ )</h2>
+            <h6>Nhiệt độ: __°C</h6>
+            <h6>Tốc độ gió: __ M/S</h6>
+            <h6>Độ ẩm: __%</h6>
+          </div>
+        </div>
+        <div class="days-forecast">
+          <h2>Dự báo 5 ngày</h2>
+          <ul class="weather-cards">
+            <li class="card mb-4">
+              <h3>( ______ )</h3>
+              <h6>Nhiệt độ: __C</h6>
+              <h6>Tốc độ gió: __ M/S</h6>
+              <h6>Độ ẩm: __%</h6>
+            </li>
+            <li class="card mb-4">
+              <h3>( ______ )</h3>
+              <h6>Nhiệt độ: __C</h6>
+              <h6>Tốc độ gió: __ M/S</h6>
+              <h6>Độ ẩm: __%</h6>
+            </li>
+            <li class="card mb-4">
+              <h3>( ______ )</h3>
+              <h6>Nhiệt độ: __C</h6>
+              <h6>Tốc độ gió: __ M/S</h6>
+              <h6>Độ ẩm: __%</h6>
+            </li>
+            <li class="card mb-4">
+              <h3>( ______ )</h3>
+              <h6>Nhiệt độ: __C</h6>
+              <h6>Tốc độ gió: __ M/S</h6>
+              <h6>Độ ẩm: __%</h6>
+            </li>
+            <li class="card mb-4">
+              <h3>( ______ )</h3>
+              <h6>Nhiệt độ: __C</h6>
+              <h6>Tốc độ gió: __ M/S</h6>
+              <h6>Độ ẩm: __%</h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
